@@ -3,7 +3,7 @@ on:
   push:
     branches: [ "main" ]
   schedule:
-    - cron: "10 0 * * *" # run at the start of every day after configs are updated
+    - cron: "10 0 1 * *" # run at the start of every day after configs are updated on day-of-month 1.
   workflow_dispatch:
 concurrency:
   group: ${{ github.ref }}
